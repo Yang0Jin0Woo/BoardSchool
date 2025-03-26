@@ -27,7 +27,7 @@ public class PostController {
     public String showList(Model model) {
         try {
             List<Post> posts = externalBoardService.fetchPosts();
-            posts.sort((p1, p2) -> Integer.compare(p2.getViewCount(), p1.getViewCount()));
+//            posts.sort((p1, p2) -> Integer.compare(p2.getViewCount(), p1.getViewCount()));
             model.addAttribute("posts", posts);
         } catch (IOException e) {
             e.printStackTrace();
