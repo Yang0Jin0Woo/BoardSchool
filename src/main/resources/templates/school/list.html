@@ -34,7 +34,7 @@
         <div style="display: flex; flex-wrap: wrap; gap: 15px;">
             <div th:each="post : ${posts}" th:if="${post.notice}" style="flex: 0 0 calc(50% - 15px);">
                 <!-- 전체 카드가 링크 역할을 하도록 <a> 태그로 감쌈 -->
-                <a th:href="@{'https://cyber.wku.ac.kr/Cyber/ComBoard_V005/Content/view.jsp?gid=1115983888724&bid=1115985252888&cid=' + ${post.cid}}"
+                <a th:href="@{/posts/view/{cid}(cid=${post.cid})}"
                    style="text-decoration: none; color: inherit; display: block;">
                     <div style="border: 1px solid #ccc; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-bottom: 15px; padding: 10px; cursor: pointer;">
                         <div style="display: flex; justify-content: space-between; align-items: center;">

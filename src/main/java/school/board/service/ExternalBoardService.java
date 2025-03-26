@@ -83,4 +83,14 @@ public class ExternalBoardService {
 
         return posts;
     }
+
+    public String fetchPostContent(String gid, String bid, String cid) throws IOException {
+        String url = String.format("https://cyber.wku.ac.kr/Cyber/ComBoard_V005/Content/view.jsp?gid=%s&bid=%s&cid=%s", gid, bid, cid);
+        Document doc = Jsoup.connect(url).get();
+
+        // 주요 내용 영역만 추출 (예: .bbs-div-kcy)
+        Element content = doc.selectFirst(".bbs-div-kcy");
+        return content != null ? content.outerHtml() : "<p>내용이 없습니다.</p>";
+    }
+
 }

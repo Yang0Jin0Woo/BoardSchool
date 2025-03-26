@@ -35,4 +35,18 @@ public class PostController {
         }
         return "school/list";
     }
+
+    @GetMapping("/view/{cid}")
+    public String showDetail(@PathVariable String cid, Model model) {
+        String gid = "1115983888724"; // 고정된 값
+        String bid = "1115985252888"; // 고정된 값
+        try {
+            String html = externalBoardService.fetchPostContent(gid, bid, cid);
+            model.addAttribute("content", html);
+        } catch (IOException e) {
+            model.addAttribute("content", "내용을 불러오는 데 실패했습니다.");
+        }
+        return "school/view"; // view.html
+    }
+
 }
