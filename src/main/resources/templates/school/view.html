@@ -6,19 +6,16 @@
 </head>
 <style>
     ul {
-      list-style-type: none; /* 불릿 제거 */
-      padding-left: 0;        /* 들여쓰기 제거 (선택사항) */
+      list-style-type: none;
+      padding-left: 0;
     }
-
-   td {
-    text-align: center;
-  }
+    td {
+        text-align: center;
+    }
 </style>
 
 </style>
 <body>
-    <div th:utext="${content}">
-        <!-- JSoup에서 가져온 HTML 내용이 여기에 렌더링됨 -->
-    </div>
+    <div th:utext="${content}"></div>
 </body>
 </html>
