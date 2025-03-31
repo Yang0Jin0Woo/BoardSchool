@@ -6,24 +6,23 @@
 </head>
 <style>
     .bbs-div-kcy {
-      width: 800px; /* 또는 width: 100%; */
-      margin: 0 auto;
-    }
-
-    .header {
-      width: 100%;
+        width: 75%;
+        height: auto;
     }
 
     .header img {
-      width: 100%;
-      height: auto;
+        display: none;
     }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
+
+    .bbs-div-kcy table {
+        width: 100%; /* .bbs-div-kcy의 80% 안에서 꽉 차게 */
+        border-collapse: collapse;
     }
 
+    td h1 img {
+        width: 100%
+    }
 </style>
 <body>
     <div th:utext="${content}"></div>
