@@ -6,21 +6,20 @@
 </head>
 <style>
     .bbs-div-kcy {
-        width: 70%;
-        height: auto;
+        justify-content: center;
+    }
+
+    .bbs-div-kcy > * {
+        width: 80%;
     }
 
     .header img {
         display: none;
     }
 
-    .bbs-div-kcy table {
-        width: 100%;
-        border-collapse: collapse;
-    }
-
-    ul {
-<!--        padding: 0;-->
+    h1 {
+        margin-block-start: 1em;
+        margin-block-end: 1em;
     }
 
     ul li {
@@ -28,6 +27,6 @@
     }
 </style>
 <body>
-    <div th:utext="${content}"></div>
+    <div th:utext="${content}" style="width: 100%"></div>
 </body>
 </html>
